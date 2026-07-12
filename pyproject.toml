@@ -1,6 +1,6 @@
 [project]
 name = "knighteval"
-version = "0.0.0"
+version = "0.0.1"
 description = "pytest for RAG — evaluate any HTTP RAG endpoint against a JSONL dataset. One config file, one command."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -42,3 +42,9 @@ Changelog = "https://github.com/GabbarX/knighteval/blob/master/CHANGELOG.md"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["knighteval"]
+
+[tool.hatch.build.targets.sdist]
+include = ["knighteval", "README.md", "LICENSE", "CHANGELOG.md"]
