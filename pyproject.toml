@@ -1,7 +1,44 @@
 [project]
-name = "rag-sec"
-version = "0.1.0"
-description = "Add your description here"
+name = "knighteval"
+version = "0.0.0"
+description = "pytest for RAG — evaluate any HTTP RAG endpoint against a JSONL dataset. One config file, one command."
 readme = "README.md"
 requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "KnightEval contributors" }]
+keywords = [
+    "rag",
+    "evaluation",
+    "llm",
+    "retrieval-augmented-generation",
+    "testing",
+    "ci",
+    "faithfulness",
+    "hallucination",
+    "ragas",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/GabbarX/knighteval"
+Repository = "https://github.com/GabbarX/knighteval"
+Issues = "https://github.com/GabbarX/knighteval/issues"
+Changelog = "https://github.com/GabbarX/knighteval/blob/master/CHANGELOG.md"
+
+# CLI entrypoint is wired in P0; kept here as the stable contract.
+# [project.scripts]
+# knighteval = "knighteval.cli.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

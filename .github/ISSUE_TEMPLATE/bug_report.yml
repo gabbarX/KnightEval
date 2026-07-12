@@ -1,0 +1,51 @@
+name: Bug report
+description: Something didn't work the way it should
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. KnightEval is pre-alpha — please check the
+        [roadmap](../../blob/master/ROADMAP.md) in case the feature simply isn't built yet.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The command you ran and, if possible, a minimal config + dataset.
+      placeholder: |
+        1. knighteval.yaml:
+           ...
+        2. Ran: knighteval run --config knighteval.yaml
+        3. Saw: ...
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: KnightEval version
+      description: "Output of `knighteval --version` (or the git commit)."
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Python & OS
+      placeholder: "Python 3.12.3, macOS 14 / Ubuntu 24.04 / Windows 11"
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-secrets
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have removed any API keys / secrets from the pasted output.
+          required: true

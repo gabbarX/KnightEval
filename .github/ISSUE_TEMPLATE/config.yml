@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / discussion
+    url: https://github.com/GabbarX/knighteval/discussions
+    about: Ask a question, share how you're using KnightEval, or discuss an idea before filing an issue.
+  - name: Design & stable contracts
+    url: https://github.com/GabbarX/knighteval/blob/master/DESIGN.md
+    about: The source of truth for schemas, scoring rules, and the contracts frozen at 1.0.
+  - name: Security vulnerability
+    url: https://github.com/GabbarX/knighteval/security/advisories/new
+    about: Report security issues privately — do not open a public issue.

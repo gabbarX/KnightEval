@@ -1,0 +1,43 @@
+name: Feature / metric request
+description: Suggest a capability, metric, or judge provider
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please skim [how we prioritize](../../blob/master/ROADMAP.md#how-we-prioritize)
+        first — KnightEval is deliberately narrow and some things are intentionally out of scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: The user need, not the solution. What can't you do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would the config / command / output look like?
+    validations:
+      required: false
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - New metric / evaluator
+        - New judge provider
+        - CLI / reporting improvement
+        - CI / integration
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope-check
+    attributes:
+      label: Scope check
+      options:
+        - label: This keeps the "one config, one command", local-first, no-SaaS shape of the tool.
+          required: false
